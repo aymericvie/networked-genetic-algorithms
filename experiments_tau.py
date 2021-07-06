@@ -1,3 +1,11 @@
+import seaborn as sns
+from main import main
+import numpy as np
+import matplotlib.pyplot as plt
+import random
+import math
+
+
 # =============================================================================
 # First we want to understand the behavior of main() during a run, before modifying the network structure.
 # A/ How does fitness changes during a run?
@@ -37,29 +45,29 @@ def experiment_curve_tau(rep,tau,y,p,x,z):
 #   Numerical experiments to get the data
 # =============================================================================
   
-final_results_sphere_1, time_axis = experiment_curve_tau(10,100,sphere,0,erdos,cons)
-final_results_ackley_1, time_axis = experiment_curve_tau(10,100,ackley,0,erdos,cons)
-final_results_rastrigin_1, time_axis = experiment_curve_tau(10,100,rastrigin,0,erdos,cons)
+final_results_sphere_1, time_axis = experiment_curve_tau(10,100,'sphere',0,'erdos','cons')
+final_results_ackley_1, time_axis = experiment_curve_tau(10,100,'ackley',0,'erdos','cons')
+final_results_rastrigin_1, time_axis = experiment_curve_tau(10,100,'rastrigin',0,'erdos','cons')
 
-final_results_sphere_2, time_axis = experiment_curve_tau(10,100,sphere,0.5,erdos,cons)
-final_results_ackley_2, time_axis = experiment_curve_tau(10,100,ackley,0.5,erdos,cons)
-final_results_rastrigin_2, time_axis = experiment_curve_tau(10,100,rastrigin,0.5,erdos,cons)
+final_results_sphere_2, time_axis = experiment_curve_tau(10,100,'sphere',0.5,'erdos','cons')
+final_results_ackley_2, time_axis = experiment_curve_tau(10,100,'ackley',0.5,'erdos','cons')
+final_results_rastrigin_2, time_axis = experiment_curve_tau(10,100,'rastrigin',0.5,'erdos','cons')
 
-final_results_sphere_3, time_axis = experiment_curve_tau(10,100,sphere,1,erdos,cons)
-final_results_ackley_3, time_axis = experiment_curve_tau(10,100,ackley,1,erdos,cons)
-final_results_rastrigin_3, time_axis = experiment_curve_tau(10,100,rastrigin,1,erdos,cons)
+final_results_sphere_3, time_axis = experiment_curve_tau(10,100,'sphere',1,'erdos','cons')
+final_results_ackley_3, time_axis = experiment_curve_tau(10,100,'ackley',1,'erdos','cons')
+final_results_rastrigin_3, time_axis = experiment_curve_tau(10,100,'rastrigin',1,'erdos','cons')
 
-final_results_sphere_4, time_axis = experiment_curve_tau(10,100,sphere,1,albert,cons)
-final_results_ackley_4, time_axis = experiment_curve_tau(10,100,ackley,1,albert,cons)
-final_results_rastrigin_4, time_axis = experiment_curve_tau(10,100,rastrigin,1,albert,cons)
+final_results_sphere_4, time_axis = experiment_curve_tau(10,100,'sphere',1,'albert','cons')
+final_results_ackley_4, time_axis = experiment_curve_tau(10,100,'ackley',1,'albert','cons')
+final_results_rastrigin_4, time_axis = experiment_curve_tau(10,100,'rastrigin',1,'albert','cons')
 
-final_results_sphere_5, time_axis = experiment_curve_tau(10,100,sphere,25,albert,cons)
-final_results_ackley_5, time_axis = experiment_curve_tau(10,100,ackley,25,albert,cons)
-final_results_rastrigin_5, time_axis = experiment_curve_tau(10,100,rastrigin,25,albert,cons)
+final_results_sphere_5, time_axis = experiment_curve_tau(10,100,'sphere',25,'albert','cons')
+final_results_ackley_5, time_axis = experiment_curve_tau(10,100,'ackley',25,'albert','cons')
+final_results_rastrigin_5, time_axis = experiment_curve_tau(10,100,'rastrigin',25,'albert','cons')
 
-final_results_sphere_6, time_axis = experiment_curve_tau(10,100,sphere,49,albert,cons)
-final_results_ackley_6, time_axis = experiment_curve_tau(10,100,ackley,49,albert,cons)
-final_results_rastrigin_6, time_axis = experiment_curve_tau(10,100,rastrigin,49,albert,cons)
+final_results_sphere_6, time_axis = experiment_curve_tau(10,100,'sphere',49,'albert','cons')
+final_results_ackley_6, time_axis = experiment_curve_tau(10,100,'ackley',49,'albert','cons')
+final_results_rastrigin_6, time_axis = experiment_curve_tau(10,100,'rastrigin',49,'albert','cons')
 
 # =============================================================================
 #   Plotting the results
