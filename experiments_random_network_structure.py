@@ -2,6 +2,12 @@
 # Imports
 # =============================================================================
 import seaborn as sns
+from main import main
+import numpy as np
+import matplotlib.pyplot as plt
+import random
+import math
+import sys
 
 # =============================================================================
 # Define the experimentation function, i.e. a function that will perform a series
@@ -46,17 +52,17 @@ def experiment_curve_p(rep,tau,y,pstart,pend,pincr,x,z):
 #   Numerical experiments to get the data for Erdos
 # =============================================================================
   
-ackley_results_1, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,ackley,0,1.01,0.01,erdos,cons) 
-ackley_results_2, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,ackley,0,1.01,0.01,erdos,cons) 
-ackley_results_3, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,ackley,0,1.01,0.01,erdos,cons) 
+ackley_results_1, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,'ackley',0,1.01,0.01,'erdos','cons') 
+ackley_results_2, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,'ackley',0,1.01,0.01,'erdos','cons') 
+ackley_results_3, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,'ackley',0,1.01,0.01,'erdos','cons') 
 
-rastrigin_results_1, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,rastrigin,0,1.01,0.01,erdos,cons) 
-rastrigin_results_2, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,rastrigin,0,1.01,0.01,erdos,cons) 
-rastrigin_results_3, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,rastrigin,0,1.01,0.01,erdos,cons) 
+rastrigin_results_1, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,'rastrigin',0,1.01,0.01,'erdos','cons') 
+rastrigin_results_2, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,'rastrigin',0,1.01,0.01,'erdos','cons') 
+rastrigin_results_3, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,'rastrigin',0,1.01,0.01,'erdos','cons') 
 
-sphere_results_1, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,sphere,0,1.01,0.01,erdos,cons) 
-sphere_results_2, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,sphere,0,1.01,0.01,erdos,cons) 
-sphere_results_3, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,sphere,0,1.01,0.01,erdos,cons) 
+sphere_results_1, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,'sphere',0,1.01,0.01,'erdos','cons') 
+sphere_results_2, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,'sphere',0,1.01,0.01,'erdos','cons') 
+sphere_results_3, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,'sphere',0,1.01,0.01,'erdos','cons') 
 
 # =============================================================================
 #   Plotting the results for ERDOS
@@ -98,17 +104,17 @@ plt.show()
 #   Numerical experiments to get the data for Albert
 # =============================================================================
   
-ackley_results_4, p_axis, fitness_history_ackley_4, time_history = experiment_curve_p(10,20,ackley,1,49.01,1,albert,cons) 
-ackley_results_5, p_axis, fitness_history_ackley_5,, time_history = experiment_curve_p(10,50,ackley,1,49.01,1,albert,cons) 
-ackley_results_6, p_axis, fitness_history_ackley_6,, time_history = experiment_curve_p(10,100,ackley,1,49.01,1,albert,cons) 
+ackley_results_4, p_axis, fitness_history_ackley_4, time_history = experiment_curve_p(10,20,'ackley',1,49.01,1,'albert','cons') 
+ackley_results_5, p_axis, fitness_history_ackley_5, time_history = experiment_curve_p(10,50,'ackley',1,49.01,1,'albert','cons') 
+ackley_results_6, p_axis, fitness_history_ackley_6, time_history = experiment_curve_p(10,100,'ackley',1,49.01,1,'albert','cons') 
 
-rastrigin_results_4, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,rastrigin,1,49.01,1,albert,cons) 
-rastrigin_results_5, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,rastrigin,1,49.01,1,albert,cons)  
-rastrigin_results_6, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,rastrigin,1,49.01,1,albert,cons) 
+rastrigin_results_4, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,'rastrigin',1,49.01,1,'albert','cons') 
+rastrigin_results_5, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,'rastrigin',1,49.01,1,'albert','cons')  
+rastrigin_results_6, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,'rastrigin',1,49.01,1,'albert','cons') 
 
-sphere_results_4, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,sphere,1,49.01,1,albert,cons)  
-sphere_results_5, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,sphere,1,49.01,1,albert,cons) 
-sphere_results_6, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,sphere,1,49.01,1,albert,cons)
+sphere_results_4, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,'sphere',1,49.01,1,'albert','cons')  
+sphere_results_5, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,'sphere',1,49.01,1,'albert','cons') 
+sphere_results_6, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,'sphere',1,49.01,1,'albert','cons')
 
 # =============================================================================
 #   Plotting the results for ALBERT
