@@ -35,10 +35,10 @@ rho = 0.7 #crossover rate
 mu = 0.05 #mutation rate       
 tau = 1000 #number of iterations  ### TBC 1000
 p = 0 #link probability
-erdos = 0 #network type
-albert = 1 #network type
-dyn = 1 #network draw type
-cons = 0 #network draw type
+# erdos = 0 #network type
+# albert = 1 #network type
+# dyn = 1 #network draw type
+# cons = 0 #network draw type
 
 # Cons = the nw structure is a once-for-all draw at the initialisation. 
 # Dyn = The nw structure is drawn from the corresponding parameter at every round
@@ -46,23 +46,23 @@ cons = 0 #network draw type
 def main(f,p,tau,x,z):
 
   # determine search domain depending on the selected test function
-  if f == ackley:
+  if f == 'ackley':
     upperb = 32.768
     lowerb = -32.768
-  if f == sphere:
+  if f == 'sphere':
     upperb = 5.12
     lowerb = -5.12
-  if f == rastrigin:
+  if f == 'rastrigin':
     upperb = 5.12
     lowerb = -5.12
 
   # determine function to optimise wrt selected test function
   def func(f,x,y):
-    if f == ackley:
+    if f == 'ackley':
       return ackley(x,y)
-    if f == sphere:
+    if f == 'sphere':
       return sphere(x,y)
-    if f == rastrigin:
+    if f == 'rastrigin':
       return rastrigin(x,y)
 
   # Initial sampling of population, and definition of some results arrays
@@ -72,25 +72,25 @@ def main(f,p,tau,x,z):
   global A
   A = []
 
-  if z == cons:
+  if z == 'cons':
 
       # Determine Population network - adjacency matrix of the corresponding random network
-      if x == erdos:
+      if x =='erdos':
           A = nx.adjacency_matrix(nx.erdos_renyi_graph(n, p, seed=None, directed=False)).todense()
           # p in [0,1] by 0.01
-      if x == albert:
+      if x == 'albert':
           A = nx.adjacency_matrix(nx.barabasi_albert_graph(n, p, seed=None)).todense()
           # p in [0,n-1] by 1
   t = 0
   while t < tau:
     # If network is dynamic, draw the time period network
-    if z == dyn:
+    if z == 'dyn':
       # Determine Population network - adjacency matrix of the corresponding random network
       
-      if x == erdos:
+      if x == 'erdos':
             A = nx.adjacency_matrix(nx.erdos_renyi_graph(n, p, seed=None, directed=False)).todense()
             # p in [0,1] by 0.01
-      if x == albert:
+      if x == 'albert':
             A = nx.adjacency_matrix(nx.barabasi_albert_graph(n, p, seed=None)).todense()
             # p in [0,n-1] by 
           
