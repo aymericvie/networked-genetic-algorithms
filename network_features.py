@@ -6,11 +6,11 @@ matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits import mplot3d
+# from mpl_toolkits import mplot3d
 import networkx as nx
 from networkx.drawing.nx_pydot import graphviz_layout
-import pydot
-import graphviz
+# import pydot
+# import graphviz
 #!pip install pydot
 #!pip install graphviz
 

@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import random
 import math
 import sys
+import pandas as pd
 
 # =============================================================================
 # Define the experimentation function, i.e. a function that will perform a series
@@ -64,6 +65,32 @@ sphere_results_1, p_axis, fitness_history_sphere, time_history = experiment_curv
 sphere_results_2, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,'sphere',0,1.01,0.01,'erdos','cons') 
 sphere_results_3, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,'sphere',0,1.01,0.01,'erdos','cons') 
 
+
+# =============================================================================
+# Saving the data
+# =============================================================================
+
+sphere1 = pd.DataFrame(sphere_results_1)
+sphere1.to_csv('er_sphere1.csv')
+sphere2 = pd.DataFrame(sphere_results_2)
+sphere2.to_csv('er_sphere2.csv')
+sphere3 = pd.DataFrame(sphere_results_3)
+sphere3.to_csv('er_sphere3.csv')
+
+rastrigin1 = pd.DataFrame(rastrigin_results_1)
+rastrigin1.to_csv('er_rastrigin1.csv')
+rastrigin2 = pd.DataFrame(rastrigin_results_2)
+rastrigin2.to_csv('er_rastrigin2.csv')
+rastrigin3 = pd.DataFrame(rastrigin_results_3)
+rastrigin3.to_csv('er_rastrigin3.csv')
+
+ackley1 = pd.DataFrame(ackley_results_1)
+ackley1.to_csv('er_ackley1.csv')
+ackley2 = pd.DataFrame(ackley_results_2)
+ackley2.to_csv('er_ackley2.csv')
+ackley3 = pd.DataFrame(ackley_results_3)
+ackley3.to_csv('er_ackley3.csv')
+
 # =============================================================================
 #   Plotting the results for ERDOS
 # =============================================================================
@@ -100,6 +127,7 @@ fig.suptitle(' ER network ')
 plt.savefig("results_erdos.png", format="png",dpi=300)
 plt.show()
 
+
 # =============================================================================
 #   Numerical experiments to get the data for Albert
 # =============================================================================
@@ -115,6 +143,58 @@ rastrigin_results_6, p_axis, fitness_history_sphere, time_history = experiment_c
 sphere_results_4, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,20,'sphere',1,49.01,1,'albert','cons')  
 sphere_results_5, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,50,'sphere',1,49.01,1,'albert','cons') 
 sphere_results_6, p_axis, fitness_history_sphere, time_history = experiment_curve_p(10,100,'sphere',1,49.01,1,'albert','cons')
+
+
+# =============================================================================
+# Saving data from Albert runs
+# =============================================================================
+
+sphere4 = pd.DataFrame(sphere_results_4)
+sphere4.to_csv('ab_sphere4.csv')
+sphere5 = pd.DataFrame(sphere_results_5)
+sphere5.to_csv('ab_sphere5.csv')
+sphere6 = pd.DataFrame(sphere_results_6)
+sphere6.to_csv('ab_sphere6.csv')
+
+rastrigin4 = pd.DataFrame(rastrigin_results_4)
+rastrigin4.to_csv('ab_rastrigin4.csv')
+rastrigin5 = pd.DataFrame(rastrigin_results_5)
+rastrigin5.to_csv('ab_rastrigin5.csv')
+rastrigin6 = pd.DataFrame(rastrigin_results_6)
+rastrigin6.to_csv('ab_rastrigin6.csv')
+
+ackley4 = pd.DataFrame(ackley_results_4)
+ackley4.to_csv('ab_ackley4.csv')
+ackley5 = pd.DataFrame(ackley_results_5)
+ackley5.to_csv('ab_ackley5.csv')
+ackley6 = pd.DataFrame(ackley_results_6)
+ackley6.to_csv('ab_ackley6.csv')
+
+
+
+df = pd.DataFrame()
+df['sphere1'] =  np.mean(sphere_results_1,axis=1)
+df['sphere2'] = np.mean(sphere_results_2,axis=1)
+df['sphere3'] = np.mean(sphere_results_3,axis=1)
+df['sphere4'] = np.mean(sphere_results_4,axis=1)
+df['sphere5'] = np.mean(sphere_results_5,axis=1)
+df['sphere6'] = np.mean(sphere_results_6,axis=1)
+
+df['ackley1'] = np.mean(ackley_results_1,axis=1)
+df['ackley2'] = np.mean(ackley_results_2,axis=1)
+df['ackley3'] = np.mean(ackley_results_3,axis=1)
+df['ackley4'] = np.mean(ackley_results_4,axis=1)
+df['ackley5'] = np.mean(ackley_results_5,axis=1)
+df['ackley6'] = np.mean(ackley_results_6,axis=1)
+
+df['rastrigin1'] = np.mean(rastrigin_results_1,axis=1)
+df['rastrigin2'] = np.mean(rastrigin_results_2,axis=1)
+df['rastrigin3'] = np.mean(rastrigin_results_3,axis=1)
+df['rastrigin4'] = np.mean(rastrigin_results_4,axis=1)
+df['rastrigin5'] = np.mean(rastrigin_results_5,axis=1)
+df['rastrigin6'] = np.mean(rastrigin_results_6,axis=1)
+
+df.to_csv('data_nw.csv')
 
 # =============================================================================
 #   Plotting the results for ALBERT
