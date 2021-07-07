@@ -176,25 +176,36 @@ df = pd.DataFrame()
 df['sphere1'] =  np.mean(sphere_results_1,axis=1)
 df['sphere2'] = np.mean(sphere_results_2,axis=1)
 df['sphere3'] = np.mean(sphere_results_3,axis=1)
-df['sphere4'] = np.mean(sphere_results_4,axis=1)
-df['sphere5'] = np.mean(sphere_results_5,axis=1)
-df['sphere6'] = np.mean(sphere_results_6,axis=1)
+
 
 df['ackley1'] = np.mean(ackley_results_1,axis=1)
 df['ackley2'] = np.mean(ackley_results_2,axis=1)
 df['ackley3'] = np.mean(ackley_results_3,axis=1)
-df['ackley4'] = np.mean(ackley_results_4,axis=1)
-df['ackley5'] = np.mean(ackley_results_5,axis=1)
-df['ackley6'] = np.mean(ackley_results_6,axis=1)
+
 
 df['rastrigin1'] = np.mean(rastrigin_results_1,axis=1)
 df['rastrigin2'] = np.mean(rastrigin_results_2,axis=1)
 df['rastrigin3'] = np.mean(rastrigin_results_3,axis=1)
+
+
+df.to_csv('data_nw_er.csv')
+
+df = pd.DataFrame()
+
+df['sphere4'] = np.mean(sphere_results_4,axis=1)
+df['sphere5'] = np.mean(sphere_results_5,axis=1)
+df['sphere6'] = np.mean(sphere_results_6,axis=1)
+
+df['ackley4'] = np.mean(ackley_results_4,axis=1)
+df['ackley5'] = np.mean(ackley_results_5,axis=1)
+df['ackley6'] = np.mean(ackley_results_6,axis=1)
+
 df['rastrigin4'] = np.mean(rastrigin_results_4,axis=1)
 df['rastrigin5'] = np.mean(rastrigin_results_5,axis=1)
 df['rastrigin6'] = np.mean(rastrigin_results_6,axis=1)
 
-df.to_csv('data_nw.csv')
+df.to_csv('data_nw_ab.csv')
+
 
 # =============================================================================
 #   Plotting the results for ALBERT
