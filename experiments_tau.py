@@ -70,28 +70,71 @@ final_results_sphere_6, time_axis = experiment_curve_tau(10,100,'sphere',49,'alb
 final_results_ackley_6, time_axis = experiment_curve_tau(10,100,'ackley',49,'albert','cons')
 final_results_rastrigin_6, time_axis = experiment_curve_tau(10,100,'rastrigin',49,'albert','cons')
 
+""" Intermediate raw data """ 
+
+sphere1 = pd.DataFrame(final_results_sphere_1)
+sphere1.to_csv('sphere1.csv')
+sphere2 = pd.DataFrame(final_results_sphere_2)
+sphere2.to_csv('sphere2.csv')
+sphere3 = pd.DataFrame(final_results_sphere_3)
+sphere3.to_csv('sphere3.csv')
+sphere4 = pd.DataFrame(final_results_sphere_4)
+sphere4.to_csv('sphere4.csv')
+sphere5 = pd.DataFrame(final_results_sphere_5)
+sphere5.to_csv('sphere5.csv')
+sphere6 = pd.DataFrame(final_results_sphere_6)
+sphere6.to_csv('sphere6.csv')
+
+ackley1 = pd.DataFrame(final_results_ackley_1)
+ackley1.to_csv('ackley1.csv')
+ackley2 = pd.DataFrame(final_results_ackley_2)
+ackley2.to_csv('ackley2.csv')
+ackley3 = pd.DataFrame(final_results_ackley_3)
+ackley3.to_csv('ackley3.csv')
+ackley4 = pd.DataFrame(final_results_ackley_4)
+ackley4.to_csv('ackley4.csv')
+ackley5 = pd.DataFrame(final_results_ackley_5)
+ackley5.to_csv('ackley5.csv')
+ackley6 = pd.DataFrame(final_results_ackley_6)
+ackley6.to_csv('ackley6.csv')
+
+rastrigin1 = pd.DataFrame(final_results_rastrigin_1)
+rastrigin1.to_csv('rastrigin1.csv')
+rastrigin2 = pd.DataFrame(final_results_rastrigin_2)
+rastrigin2.to_csv('rastrigin2.csv')
+rastrigin3 = pd.DataFrame(final_results_rastrigin_3)
+rastrigin3.to_csv('rastrigin3.csv')
+rastrigin4 = pd.DataFrame(final_results_rastrigin_4)
+rastrigin4.to_csv('rastrigin4.csv')
+rastrigin5 = pd.DataFrame(final_results_rastrigin_5)
+rastrigin5.to_csv('rastrigin5.csv')
+rastrigin6 = pd.DataFrame(final_results_rastrigin_6)
+rastrigin6.to_csv('rastrigin6.csv')
+
+
+""" Processed data (means) """ 
 
 df = pd.DataFrame()
-df['sphere1'] = final_results_sphere_1
-df['sphere2'] = final_results_sphere_2
-df['sphere3'] = final_results_sphere_3
-df['sphere4'] = final_results_sphere_4
-df['sphere5'] = final_results_sphere_5
-df['sphere6'] = final_results_sphere_6
+df['sphere1'] =  np.mean(final_results_sphere_1,axis=0)
+df['sphere2'] = np.mean(final_results_sphere_2,axis=0)
+df['sphere3'] = np.mean(final_results_sphere_3,axis=0)
+df['sphere4'] = np.mean(final_results_sphere_4,axis=0)
+df['sphere5'] = np.mean(final_results_sphere_5,axis=0)
+df['sphere6'] = np.mean(final_results_sphere_6,axis=0)
 
-df['ackley1'] = final_results_ackley_1
-df['ackley2'] = final_results_ackley_2
-df['ackley3'] = final_results_ackley_3
-df['ackley4'] = final_results_ackley_4
-df['ackley5'] = final_results_ackley_5
-df['ackley6'] = final_results_ackley_6
+df['ackley1'] = np.mean(final_results_ackley_1,axis=0)
+df['ackley2'] = np.mean(final_results_ackley_2,axis=0)
+df['ackley3'] = np.mean(final_results_ackley_3,axis=0)
+df['ackley4'] = np.mean(final_results_ackley_4,axis=0)
+df['ackley5'] = np.mean(final_results_ackley_5,axis=0)
+df['ackley6'] = np.mean(final_results_ackley_6,axis=0)
 
-df['rastrigin1'] = final_results_rastrigin_1
-df['rastrigin2'] = final_results_rastrigin_2
-df['rastrigin3'] = final_results_rastrigin_3
-df['rastrigin4'] = final_results_rastrigin_4
-df['rastrigin5'] = final_results_rastrigin_5
-df['rastrigin6'] = final_results_rastrigin_6
+df['rastrigin1'] = np.mean(final_results_rastrigin_1,axis=0)
+df['rastrigin2'] = np.mean(final_results_rastrigin_2,axis=0)
+df['rastrigin3'] = np.mean(final_results_rastrigin_3,axis=0)
+df['rastrigin4'] = np.mean(final_results_rastrigin_4,axis=0)
+df['rastrigin5'] = np.mean(final_results_rastrigin_5,axis=0)
+df['rastrigin6'] = np.mean(final_results_rastrigin_6,axis=0)
 
 df.to_csv('data_tau.csv')
 
