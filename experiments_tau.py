@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 import math
+import pandas as pd
 
 
 # =============================================================================
@@ -68,6 +69,31 @@ final_results_rastrigin_5, time_axis = experiment_curve_tau(10,100,'rastrigin',2
 final_results_sphere_6, time_axis = experiment_curve_tau(10,100,'sphere',49,'albert','cons')
 final_results_ackley_6, time_axis = experiment_curve_tau(10,100,'ackley',49,'albert','cons')
 final_results_rastrigin_6, time_axis = experiment_curve_tau(10,100,'rastrigin',49,'albert','cons')
+
+
+df = pd.DataFrame()
+df['sphere1'] = final_results_sphere_1
+df['sphere2'] = final_results_sphere_2
+df['sphere3'] = final_results_sphere_3
+df['sphere4'] = final_results_sphere_4
+df['sphere5'] = final_results_sphere_5
+df['sphere6'] = final_results_sphere_6
+
+df['ackley1'] = final_results_ackley_1
+df['ackley2'] = final_results_ackley_2
+df['ackley3'] = final_results_ackley_3
+df['ackley4'] = final_results_ackley_4
+df['ackley5'] = final_results_ackley_5
+df['ackley6'] = final_results_ackley_6
+
+df['rastrigin1'] = final_results_rastrigin_1
+df['rastrigin2'] = final_results_rastrigin_2
+df['rastrigin3'] = final_results_rastrigin_3
+df['rastrigin4'] = final_results_rastrigin_4
+df['rastrigin5'] = final_results_rastrigin_5
+df['rastrigin6'] = final_results_rastrigin_6
+
+df.to_csv('data_tau.csv')
 
 # =============================================================================
 #   Plotting the results
