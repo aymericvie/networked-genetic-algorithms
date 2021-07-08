@@ -12,6 +12,7 @@ This repository contains all the code involved in this research project. I recom
 
 ![functions_landscape](https://user-images.githubusercontent.com/39515571/124933572-e6fc1e80-dffb-11eb-9e42-e65beeb9bbd7.png)
 
+## How to use this code
 
 - landscapes_united creates a combined plot for all test functions landscapes
 - network_features creates plenty of networks, plots different examples to illustrate how network structure changes with respect to the network structure parameters. It also shows how some key features of networks change with those parameters.
@@ -21,7 +22,7 @@ This repository contains all the code involved in this research project. I recom
 
 The paper is linked here: https://arxiv.org/abs/2104.04254. This research has been accepted to the conference GECCO 2021.
 
-##Reproducibility and data
+## Reproducibility and data
 
 For reproducibility purposes, the intermediate and final data of the analysis has been published. The folder data_tau contains the data on the performance of the NGAs over time. The folder data_nw contains the data on the performance of the NGAs depending on network structure.
 
