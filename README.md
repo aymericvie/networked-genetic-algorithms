@@ -21,7 +21,14 @@ This repository contains all the code involved in this research project. I recom
 
 The paper is linked here: https://arxiv.org/abs/2104.04254. This research has been accepted to the conference GECCO 2021.
 
-Reproducibility update:
+##Reproducibility update:
 
 
 For reproducibility purposes, the intermediate and final data of the analysis has been published. The folder data_tau contains the data on the performance of the NGAs over time. The folder data_nw contains the data on the performance of the NGAs depending on network structure.
+
+## Computational cost
+The experiments run in 30 to 90 minutes on a commercial laptop (Intel Core i5-10310U CPU 1.7GHz, 16BG RAM).
+Computation uses standard packages: math, ranodm, numpy, matplotlib.
+
+## Acknowledgments
+Many thanks for reproduciblity advice and help to Anja Jankovic, Andreea Avramescu, Lennart Schapermeier, Manuel Lopez-Ibanez
