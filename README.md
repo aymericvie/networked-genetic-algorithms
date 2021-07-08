@@ -23,7 +23,7 @@ For reproducibility purposes, the intermediate and final data of the analysis ha
 
 ## Computational cost
 The experiments run in 30 to 90 minutes on a commercial laptop (Intel Core i5-10310U CPU 1.7GHz, 16BG RAM).
-Computation uses standard packages: math, ranodm, numpy, matplotlib.
+Computation uses standard packages: math, random, numpy, matplotlib.
 
 ## Acknowledgments
 Many thanks for reproduciblity advice and help to Anja Jankovic, Andreea Avramescu, Lennart Schapermeier, Manuel Lopez-Ibanez
