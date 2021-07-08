@@ -1,6 +1,6 @@
 # Networked Genetic Algorithm (NGA)
 
-![networks_landscape](https://user-images.githubusercontent.com/39515571/124933532-df3c7a00-dffb-11eb-8ed9-12c9bfec6912.png) | width=100)
+![networks_landscape](https://user-images.githubusercontent.com/39515571/124933532-df3c7a00-dffb-11eb-8ed9-12c9bfec6912.png | width=100)
 
 While all genetic algorithms commonly allow each individual in the population to mate with any other individuals, nature and social systems do not exhibit such a complete network structure. The NGA is an attempt to identify how the network structure of the population impacts the performance of genetic algorithms.
 To do this, I use NGAs to optimise some test functions, and run various network structures to identify these effects.
@@ -10,7 +10,7 @@ This repository contains all the code involved in this research project. I recom
 
 - test_functions_landscape defines the test functions and plots their landscapes with pretty colors
 
-![functions_landscape](https://user-images.githubusercontent.com/39515571/124933572-e6fc1e80-dffb-11eb-9e42-e65beeb9bbd7.png) | width=100)
+![functions_landscape](https://user-images.githubusercontent.com/39515571/124933572-e6fc1e80-dffb-11eb-9e42-e65beeb9bbd7.png | width=100)
 
 ## How to use this code
 
