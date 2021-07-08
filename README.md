@@ -21,8 +21,7 @@ This repository contains all the code involved in this research project. I recom
 
 The paper is linked here: https://arxiv.org/abs/2104.04254. This research has been accepted to the conference GECCO 2021.
 
-##Reproducibility update:
-
+##Reproducibility and data
 
 For reproducibility purposes, the intermediate and final data of the analysis has been published. The folder data_tau contains the data on the performance of the NGAs over time. The folder data_nw contains the data on the performance of the NGAs depending on network structure.
 
