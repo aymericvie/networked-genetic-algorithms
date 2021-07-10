@@ -15,7 +15,7 @@ This repository contains all the code involved in this research project.
 - experiments_tau allows to perform robust experiments on the behavior of the NGA over time
 - experiments_random_network_structure allows to perform robust experiments on the behavior of the NGA with respect to network structure
 
-The paper is linked here: https://arxiv.org/abs/2104.04254. This research has been accepted to the conference GECCO 2021.
+The preprint is linked here: https://arxiv.org/abs/2104.04254. This research has been accepted to the conference GECCO 2021. The article has been published in the GECCO 21 procedings: https://dl.acm.org/doi/10.1145/3449726.3463134
 
 ## Reproducibility and data
 
